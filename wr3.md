@@ -275,3 +275,60 @@ mkdir ~/shared
 ```bash
 echo "Test from Main VM" > ~/shared/test.txt
 ```
+<img width="1147" height="118" alt="image" src="https://github.com/user-attachments/assets/50a4f610-7fdb-43d7-8556-83b969025383" />
+
+Скрін 10 — Створення shared та test.txt
+
+Редагування smb.conf
+```bash
+sudo nano /etc/samba/smb.conf
+```
+Додано:
+```bash
+[shared]
+path = /home/yaroslava/shared
+browsable = yes
+read only = no
+guest ok = yes
+force user = yaroslava
+create mask = 0777
+directory mask = 0777
+```
+
+<img width="1044" height="871" alt="image" src="https://github.com/user-attachments/assets/682eb5c8-bd70-4ae3-9c18-19d29721a30c" />
+
+Скрін 11 — Файл smb.conf після редагування
+
+Перезапуск служби:
+```bash
+sudo systemctl restart smbd
+```
+
+<img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/1eb1c06c-28bd-4862-9e23-0a7696962a35" />
+
+Скрін 12 — Status smbd
+
+### 3.7 Монтування папки на клоні
+
+Створення точки монтування:
+```bash
+mkdir ~/shared_from_main
+```
+
+Монтування:
+```bash
+sudo mount -t cifs //192.168.56.102/shared ~/shared_from_main -o guest
+```
+
+<img width="1060" height="145" alt="image" src="https://github.com/user-attachments/assets/247ecf5f-c7e2-4aba-8e4a-c8602220938a" />
+
+Скрін 13 — Успішне монтування мережевої папки з основної ВМ на клон
+
+Копіювання файлу:
+```bash
+cp ~/shared_from_main/test.txt ~/Desktop/
+```
+
+<img width="837" height="100" alt="image" src="https://github.com/user-attachments/assets/c1a1e6ce-3fa9-497c-8392-39c3736bde57" />
+
+Скрін 14 — Файл на Desktop клону
