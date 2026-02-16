@@ -255,9 +255,23 @@ nc -l 1234
 
 На основній ВМ (сервер):
 ```bash
-nc 192.168.56.102 1234
+nc 192.168.56.101 1234
 ```
 
 <img width="788" height="111" alt="image" src="https://github.com/user-attachments/assets/d7d88bb2-60dd-466b-9738-efdd271871ff" />
 
 Скрін 9 — Передача повідомлення
+
+### 3.6 Налаштування спільної папки (Samba)
+
+На основній ВМ
+
+Створення папки:
+```bash
+mkdir ~/shared
+```
+
+Створення тестового файлу:
+```bash
+echo "Test from Main VM" > ~/shared/test.txt
+```
