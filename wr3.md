@@ -168,3 +168,20 @@ NAT дозволяє віртуальній машині отримувати д
 
 <img width="665" height="417" alt="image" src="https://github.com/user-attachments/assets/b594c696-0c77-47e4-ad9e-26c1cfbb2a22" />
 
+## 3. Розгортання мережі між робочою ОС та її клоном
+3.1 Налаштування мережевих адаптерів
+
+Для організації взаємодії між віртуальною машиною та її клоном було налаштовано два мережеві адаптери:
+- Adapter 1 — NAT (для доступу до Інтернету)
+- Adapter 2 — Host-Only Adapter (для локальної мережі між ВМ)
+
+Налаштування виконано у:
+```bash
+Settings → Network
+```
+
+<img width="1251" height="415" alt="image" src="https://github.com/user-attachments/assets/25aea7e8-eea1-4713-b899-34d5fb6d8838" />
+
+<img width="1257" height="379" alt="image" src="https://github.com/user-attachments/assets/36deff64-2f7e-4524-bd43-2e5862f629b4" />
+
+Скрін 1 — Налаштування мережевих адаптерів основної віртуальної машини (NAT + Host-Only).
