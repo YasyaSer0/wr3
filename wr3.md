@@ -207,7 +207,7 @@ ip a
 
 Скрін 2 — IP основної ВМ (inet 192.168.56.102)
 
---
+---
 
 <img width="1086" height="846" alt="image" src="https://github.com/user-attachments/assets/68df7fdb-1244-4421-b48f-6b05ead1ebca" />
 
@@ -215,6 +215,17 @@ ip a
 
 ### 3.3 Перевірка локального з’єднання (ping)
 
+Для перевірки мережевої доступності між машинами використано команду:
+
+```bash
+ping IP_адреса
+```
+
+Ping дозволяє перевірити:
+- чи бачать машини одна одну,
+- затримку передачі,
+- відсутність втрат пакетів.
+  
 На основній ВМ:
 ```bash
 ping 192.168.56.102
@@ -233,9 +244,13 @@ ping 192.168.56.101
 
 Скрін 5 — Ping з клону
 
+Результат:
+
+Відповіді отримано без втрат пакетів, що підтверджує коректну роботу локальної мережі.
+
 ### 3.4 Перевірка доступу до Інтернету
 
-Було відкрито браузер Firefox та переглянуто відео на YouTube.
+Для перевірки роботи NAT-адаптера було відкрито браузер Firefox та переглянуто відео на YouTube.
 
 <img width="1053" height="838" alt="image" src="https://github.com/user-attachments/assets/50cf235a-62ae-49b3-84e3-8099f8014257" />
 
@@ -247,36 +262,53 @@ ping 192.168.56.101
 
 Скрін 7 — YouTube на клоні
 
+Висновок:
+
+Обидві віртуальні машини мають доступ до мережі Інтернет.
+
 ### 3.5 Обмін повідомленнями через netcat
+
+Для демонстрації передачі даних у локальній мережі використано утиліту netcat.
 
 Встановлення:
 ```bash
 sudo apt install netcat-openbsd
 ```
 
-На клоні (клієнт):
+Netcat дозволяє створювати TCP-з’єднання між машинами.
+
+На клоні (режим прослуховування):
 ```bash
 nc -l 1234
 ```
-
+Команда означає:
+- -l — listen (очікування підключення)
+- 1234 — порт
+- 
 <img width="438" height="69" alt="image" src="https://github.com/user-attachments/assets/7d74923c-8e29-42d0-9459-95b4a94aa4f5" />
 
 Скрін 8 — Запуск nc -l 1234
 
-На основній ВМ (сервер):
+На основній ВМ (підключення):
 ```bash
 nc 192.168.56.101 1234
 ```
+
+Після введення тексту повідомлення з’явилось на клоні.
 
 <img width="788" height="111" alt="image" src="https://github.com/user-attachments/assets/d7d88bb2-60dd-466b-9738-efdd271871ff" />
 
 Скрін 9 — Передача повідомлення
 
+Результат:
+
+Обмін повідомленнями між ВМ виконано успішно.
+
 ### 3.6 Налаштування спільної папки (Samba)
 
 На основній ВМ
 
-Створення папки:
+Створення директорії:
 ```bash
 mkdir ~/shared
 ```
@@ -287,9 +319,9 @@ echo "Test from Main VM" > ~/shared/test.txt
 ```
 <img width="1147" height="118" alt="image" src="https://github.com/user-attachments/assets/50a4f610-7fdb-43d7-8556-83b969025383" />
 
-Скрін 10 — Створення shared та test.txt
+Скрін 10 — Створення папки та файлу
 
-Редагування smb.conf
+Редагування конфігурації Samba
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
@@ -316,7 +348,7 @@ sudo systemctl restart smbd
 
 <img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/1eb1c06c-28bd-4862-9e23-0a7696962a35" />
 
-Скрін 12 — Status smbd
+Скрін 12 — Служба smbd активна (running)
 
 ### 3.7 Монтування папки на клоні
 
@@ -334,6 +366,12 @@ sudo mount -t cifs //192.168.56.102/shared ~/shared_from_main -o guest
 
 Скрін 13 — Успішне монтування мережевої папки з основної ВМ на клон
 
+Перевірка:
+```bash
+ls ~/shared_from_main
+```
+Файл test.txt доступний.
+
 Копіювання файлу:
 ```bash
 cp ~/shared_from_main/test.txt ~/Desktop/
@@ -341,4 +379,10 @@ cp ~/shared_from_main/test.txt ~/Desktop/
 
 <img width="837" height="100" alt="image" src="https://github.com/user-attachments/assets/c1a1e6ce-3fa9-497c-8392-39c3736bde57" />
 
-Скрін 14 — Файл на Desktop клону
+Скрін 14 — Файл test.txt на Desktop клону
+
+---
+
+<img width="696" height="687" alt="image" src="https://github.com/user-attachments/assets/3a45bc5f-e40d-4e40-b532-fce416775995" />
+
+Скрін 15 — Файл test.txt у графічному середовищі клону
