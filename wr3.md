@@ -42,8 +42,10 @@
 - Натиснуто кнопку «Закінчити».
 
 <img width="659" height="192" alt="image" src="https://github.com/user-attachments/assets/68626d97-89e4-4d86-bb62-b054f2528f4b" />
+
  **Вікно клонування віртуальної машини**
 
 
  <img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/b34a17c2-de81-44d6-bb12-79e8b036d2ba" />
+ 
 **Список віртуальних машин після створення клону**
