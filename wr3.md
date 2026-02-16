@@ -203,3 +203,34 @@ ip a
 
 Скрін 3 — IP клону(inet 192.168.56.101)
 
+### 3.3 Перевірка локального з’єднання (ping)
+
+На основній ВМ:
+```bash
+ping 192.168.56.102
+```
+<img width="783" height="403" alt="image" src="https://github.com/user-attachments/assets/7f6bdc62-f952-495f-8f14-04a369258046" />
+
+Скрін 4 — Ping з основної ВМ
+
+--- 
+
+На клоні:
+```bash
+ping 192.168.56.101
+```
+<img width="744" height="460" alt="image" src="https://github.com/user-attachments/assets/03ab2931-685b-4ff0-9f91-59fab09c813b" />
+
+Скрін 5 — Ping з клону
+
+### 3.4 Перевірка доступу до Інтернету
+
+Було відкрито браузер Firefox та переглянуто відео на YouTube.
+
+<img width="1053" height="838" alt="image" src="https://github.com/user-attachments/assets/50cf235a-62ae-49b3-84e3-8099f8014257" />
+
+Скрін 6 — YouTube на основній ВМ
+
+---
+
+Скрін 7 — YouTube на клоні
