@@ -41,11 +41,15 @@
 - Додаткові параметри залишено за замовчуванням.
 - Натиснуто кнопку «Закінчити».
 
-<img width="659" height="192" alt="image" src="https://github.com/user-attachments/assets/68626d97-89e4-4d86-bb62-b054f2528f4b" />
+<img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/65b6d0bc-6ca0-4bed-adac-5c0994d03c9e" />
 
  **Скрін 1: Вікно клонування віртуальної машини**
 
 
- <img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/b34a17c2-de81-44d6-bb12-79e8b036d2ba" />
- 
+<img width="611" height="225" alt="image" src="https://github.com/user-attachments/assets/a75e233a-8de4-4ceb-a7f1-efc958a7b3c2" />
+
 **Скрін 2: Список віртуальних машин після створення клону**
+
+В результаті було створено незалежну копію віртуальної машини.
+
+## Експорт віртуальної машини в інше середовище
