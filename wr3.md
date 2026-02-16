@@ -233,4 +233,21 @@ ping 192.168.56.101
 
 ---
 
+<img width="833" height="754" alt="image" src="https://github.com/user-attachments/assets/3064e44b-7341-4a9f-bc1c-8c1dd1832c69" />
+
 Скрін 7 — YouTube на клоні
+
+### 3.5 Обмін повідомленнями через netcat
+
+Встановлення:
+```bash
+sudo apt install netcat-openbsd
+```
+На основній ВМ (сервер):
+```bash
+nc -l 1234
+```
+На клоні (клієнт):
+```bash
+nc 192.168.56.102 1234
+```
