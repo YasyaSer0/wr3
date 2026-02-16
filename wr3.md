@@ -247,7 +247,16 @@ sudo apt install netcat-openbsd
 ```bash
 nc -l 1234
 ```
+
+<img width="438" height="69" alt="image" src="https://github.com/user-attachments/assets/7d74923c-8e29-42d0-9459-95b4a94aa4f5" />
+
+Скрін 8 — Запуск nc -l 1234
+
 На клоні (клієнт):
 ```bash
 nc 192.168.56.102 1234
 ```
+
+<img width="788" height="111" alt="image" src="https://github.com/user-attachments/assets/d7d88bb2-60dd-466b-9738-efdd271871ff" />
+
+Скрін 9 — Передача повідомлення
