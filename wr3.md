@@ -207,7 +207,7 @@ ip a
 
 Скрін 2 — IP основної ВМ (inet 192.168.56.102)
 
--
+--
 
 <img width="1086" height="846" alt="image" src="https://github.com/user-attachments/assets/68df7fdb-1244-4421-b48f-6b05ead1ebca" />
 
