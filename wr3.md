@@ -180,11 +180,16 @@ NAT дозволяє віртуальній машині отримувати д
 Settings → Network
 ```
 
+Пояснення:
+- NAT забезпечує вихід у мережу Інтернет.
+- Host-Only створює ізольовану локальну мережу між двома віртуальними машинами.
+- Комбінація цих двох адаптерів дозволяє одночасно мати Інтернет та внутрішню мережу.
+
 <img width="1251" height="415" alt="image" src="https://github.com/user-attachments/assets/25aea7e8-eea1-4713-b899-34d5fb6d8838" />
 
 <img width="1257" height="379" alt="image" src="https://github.com/user-attachments/assets/36deff64-2f7e-4524-bd43-2e5862f629b4" />
 
-Скрін 1 — Налаштування мережевих адаптерів основної віртуальної машини (NAT + Host-Only).
+Скрін 1 — Налаштування мережевих адаптерів (NAT + Host-Only).
 
 ### 3.2 Перевірка IP-адрес
 
@@ -193,11 +198,16 @@ Settings → Network
 ip a
 ```
 
+Команда ip a відображає:
+- список мережевих інтерфейсів,
+- IP-адреси,
+- стан адаптерів (UP/DOWN).
+- 
 <img width="1036" height="787" alt="image" src="https://github.com/user-attachments/assets/5474e7eb-9e23-47f5-8d09-87a49ebba616" />
 
 Скрін 2 — IP основної ВМ (inet 192.168.56.102)
 
----
+-
 
 <img width="1086" height="846" alt="image" src="https://github.com/user-attachments/assets/68df7fdb-1244-4421-b48f-6b05ead1ebca" />
 
