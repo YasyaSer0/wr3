@@ -455,6 +455,8 @@ echo "Test from main VM" > ~/Desktop/test_from_vm.txt
 ```
 Далі файл було скопійовано у спільну папку:
 ```bash
+cp ~/Desktop/test_from_vm.txt /media/sf_wr3/
+```
 
 <img width="804" height="124" alt="image" src="https://github.com/user-attachments/assets/36c240e4-33cb-4261-9830-4b06e328fe4e" />
 
@@ -463,6 +465,7 @@ echo "Test from main VM" > ~/Desktop/test_from_vm.txt
 Аналогічно на клоні:
 ```bash
 echo "Test from clone VM" > ~/Desktop/test_from_clone.txt
+
 cp ~/Desktop/test_from_clone.txt /media/sf_wr3/
 ```
 
