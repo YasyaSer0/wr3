@@ -284,7 +284,7 @@ nc -l 1234
 Команда означає:
 - -l — listen (очікування підключення)
 - 1234 — порт
-- 
+  
 <img width="438" height="69" alt="image" src="https://github.com/user-attachments/assets/7d74923c-8e29-42d0-9459-95b4a94aa4f5" />
 
 Скрін 8 — Запуск nc -l 1234
