@@ -386,3 +386,101 @@ cp ~/shared_from_main/test.txt ~/Desktop/
 <img width="696" height="687" alt="image" src="https://github.com/user-attachments/assets/3a45bc5f-e40d-4e40-b532-fce416775995" />
 
 Скрін 15 — Файл test.txt у графічному середовищі клону
+
+## 4. Обмін інформацією між основною ОС (Windows) та віртуальними ОС
+### 4.1 Організація механізму обміну даними
+
+Для реалізації обміну файлами між основною операційною системою Windows та віртуальними машинами було використано механізм Shared Folders (Спільні теки) VirtualBox.
+
+У налаштуваннях віртуальних машин було створено спільну папку:
+- Folder Path: C:\Users\Яся\Downloads\wr3
+- Folder Name: wr3
+- Увімкнено: Автоматичне монтування
+- Увімкнено: Make Global
+
+<img width="509" height="394" alt="image" src="https://github.com/user-attachments/assets/789aa024-4033-4086-bbcb-5ae4eb215481" />
+
+Скрін 1 — Налаштування спільної папки у VirtualBox
+
+Після встановлення Guest Additions та додавання користувача до групи vboxsf, папка автоматично монтується у каталозі:
+```bash
+/media/sf_wr3
+```
+Перевірка виконана командою:
+```bash
+ls /media
+```
+<img width="683" height="323" alt="image" src="https://github.com/user-attachments/assets/6f272242-0971-42e6-954e-181f4a24623a" />
+
+Скрін 2 — Перевірка автоматичного монтування спільної папки
+
+### 4.2 Копіювання аудіо-файлу з Windows до віртуальних машин
+
+У папку wr3 на Windows було поміщено аудіо-файл:
+```bash
+Charli XCX - Seeing Things.mp3
+```
+На основній ВМ перевірено наявність файлу:
+```bash
+ls /media/sf_wr3
+```
+
+<img width="881" height="67" alt="image" src="https://github.com/user-attachments/assets/82f99834-530d-46e7-956a-cc78dec9c8bf" />
+
+Скрін 3 — Аудіофайл у спільній папці
+
+Далі файл було скопійовано на робочий стіл основної ВМ:
+```bash
+cp "/media/sf_wr3/Charli XCX - Seeing Things.mp3" ~/Desktop/
+```
+
+<img width="837" height="129" alt="image" src="https://github.com/user-attachments/assets/5188f54f-d0b1-4c1c-bbb7-e23d2420a3e3" />
+
+Скрін 4 — Аудіофайл на Desktop основної ВМ
+
+Аналогічні дії виконано на клоні:
+```bash
+cp "/media/sf_wr3/Charli XCX - Seeing Things.mp3" ~/Desktop/
+```
+
+<img width="857" height="358" alt="image" src="https://github.com/user-attachments/assets/18a93c1d-a49f-40df-befa-78c7cdb1a6a4" />
+
+Скрін 5 — Аудіофайл на Desktop клону
+
+### 4.3 Зворотна дія: копіювання документів з ВМ до Windows
+
+На основній ВМ створено тестовий файл:
+```bash
+echo "Test from main VM" > ~/Desktop/test_from_vm.txt
+```
+Далі файл було скопійовано у спільну папку:
+```bash
+
+<img width="804" height="124" alt="image" src="https://github.com/user-attachments/assets/36c240e4-33cb-4261-9830-4b06e328fe4e" />
+
+Скрін 6 — Копіювання документа з основної ВМ у Windows
+
+Аналогічно на клоні:
+```bash
+echo "Test from clone VM" > ~/Desktop/test_from_clone.txt
+cp ~/Desktop/test_from_clone.txt /media/sf_wr3/
+```
+
+<img width="1143" height="157" alt="image" src="https://github.com/user-attachments/assets/0b095220-b366-4974-9d37-6ee925b723e9" />
+
+Скрін 7 — Копіювання документа з клону у Windows
+
+### 4.4 Перевірка у Windows
+
+У папці:
+```bash
+C:\Users\Яся\Downloads\wr3
+```
+з’явились:
+- test_from_vm.txt
+- test_from_clone.txt
+- Charli XCX - Seeing Things.mp3
+
+<img width="1715" height="638" alt="image" src="https://github.com/user-attachments/assets/3948a418-b7cd-420c-897b-4323103f2cbe" />
+
+Скрін 8 — Результат обміну файлами у Windows
