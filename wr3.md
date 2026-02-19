@@ -202,7 +202,7 @@ ip a
 - список мережевих інтерфейсів,
 - IP-адреси,
 - стан адаптерів (UP/DOWN).
-- 
+
 <img width="1036" height="787" alt="image" src="https://github.com/user-attachments/assets/5474e7eb-9e23-47f5-8d09-87a49ebba616" />
 
 Скрін 2 — IP основної ВМ (inet 192.168.56.102)
