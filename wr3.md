@@ -20,7 +20,7 @@
 
 ---
 
-**Київ — 2026**
+**Київ - 2026**
 
 ---
 
@@ -38,7 +38,7 @@
 
 <img width="659" height="192" alt="image" src="https://github.com/user-attachments/assets/044a961a-ca0a-4e70-93e4-2ab54ee0612e" />
 
-Скрін 1 – Виклик команди «Клонувати…»
+Скрін 1 - Виклик команди «Клонувати…»
 
 ---
 
@@ -55,7 +55,7 @@
 
 <img width="957" height="624" alt="image" src="https://github.com/user-attachments/assets/9970f21b-10c1-4d8e-9606-cc334838eb9c" />
 
-Скрін 2 – Вікно налаштування параметрів клону
+Скрін 2 - Вікно налаштування параметрів клону
 
 ---
 
@@ -65,7 +65,7 @@
 
 <img width="611" height="225" alt="image" src="https://github.com/user-attachments/assets/ac3d76f7-30b4-4418-b28c-12a316038a8c" />
 
-Скрін 3 – Список віртуальних машин після клонування
+Скрін 3 - Список віртуальних машин після клонування
 
 ## 1.2 Експорт віртуальної машини в OVA-формат
 
@@ -78,7 +78,7 @@
 
 <img width="536" height="203" alt="image" src="https://github.com/user-attachments/assets/934833f2-7993-4961-a3e9-b9eadbd64678" />
 
-Скрін 4 – Меню «Експортувати образ віртуальної машини»
+Скрін 4 - Меню «Експортувати образ віртуальної машини»
 
 ---
 
@@ -88,7 +88,7 @@
 
 <img width="623" height="294" alt="image" src="https://github.com/user-attachments/assets/53e07ade-be52-4565-91bd-add144a60d7f" />
 
-Скрін 5 – Вікно вибору віртуальної машини
+Скрін 5 - Вікно вибору віртуальної машини
 
 ---
 
@@ -104,7 +104,7 @@
 
 <img width="714" height="272" alt="image" src="https://github.com/user-attachments/assets/d586cce8-5e14-4d8b-9904-bc7cad2bc439" />
 
-Скрін 6 – Вікно Format settings (OVA формат)
+Скрін 6 - Вікно Format settings (OVA формат)
 
 ---
 
@@ -172,8 +172,8 @@ NAT дозволяє віртуальній машині отримувати д
 ### 3.1 Налаштування мережевих адаптерів
 
 Для організації взаємодії між віртуальною машиною та її клоном було налаштовано два мережеві адаптери:
-- Adapter 1 — NAT (для доступу до Інтернету)
-- Adapter 2 — Host-Only Adapter (для локальної мережі між ВМ)
+- Adapter 1 - NAT (для доступу до Інтернету)
+- Adapter 2 - Host-Only Adapter (для локальної мережі між ВМ)
 
 Налаштування виконано у:
 ```bash
@@ -189,7 +189,7 @@ Settings → Network
 
 <img width="1257" height="379" alt="image" src="https://github.com/user-attachments/assets/36deff64-2f7e-4524-bd43-2e5862f629b4" />
 
-Скрін 1 — Налаштування мережевих адаптерів (NAT + Host-Only).
+Скрін 1 - Налаштування мережевих адаптерів (NAT + Host-Only).
 
 ### 3.2 Перевірка IP-адрес
 
@@ -205,13 +205,13 @@ ip a
 
 <img width="1036" height="787" alt="image" src="https://github.com/user-attachments/assets/5474e7eb-9e23-47f5-8d09-87a49ebba616" />
 
-Скрін 2 — IP основної ВМ (inet 192.168.56.102)
+Скрін 2 - IP основної ВМ (inet 192.168.56.102)
 
 ---
 
 <img width="1086" height="846" alt="image" src="https://github.com/user-attachments/assets/68df7fdb-1244-4421-b48f-6b05ead1ebca" />
 
-Скрін 3 — IP клону(inet 192.168.56.101)
+Скрін 3 - IP клону(inet 192.168.56.101)
 
 ### 3.3 Перевірка локального з’єднання (ping)
 
@@ -232,7 +232,7 @@ ping 192.168.56.102
 ```
 <img width="783" height="403" alt="image" src="https://github.com/user-attachments/assets/7f6bdc62-f952-495f-8f14-04a369258046" />
 
-Скрін 4 — Ping з основної ВМ
+Скрін 4 - Ping з основної ВМ
 
 --- 
 
@@ -242,7 +242,7 @@ ping 192.168.56.101
 ```
 <img width="744" height="460" alt="image" src="https://github.com/user-attachments/assets/03ab2931-685b-4ff0-9f91-59fab09c813b" />
 
-Скрін 5 — Ping з клону
+Скрін 5 - Ping з клону
 
 Результат:
 
@@ -254,13 +254,13 @@ ping 192.168.56.101
 
 <img width="1053" height="838" alt="image" src="https://github.com/user-attachments/assets/50cf235a-62ae-49b3-84e3-8099f8014257" />
 
-Скрін 6 — YouTube на основній ВМ
+Скрін 6 - YouTube на основній ВМ
 
 ---
 
 <img width="833" height="754" alt="image" src="https://github.com/user-attachments/assets/3064e44b-7341-4a9f-bc1c-8c1dd1832c69" />
 
-Скрін 7 — YouTube на клоні
+Скрін 7 - YouTube на клоні
 
 Висновок:
 
@@ -282,12 +282,12 @@ Netcat дозволяє створювати TCP-з’єднання між ма
 nc -l 1234
 ```
 Команда означає:
-- -l — listen (очікування підключення)
-- 1234 — порт
+- -l - listen (очікування підключення)
+- 1234 - порт
   
 <img width="438" height="69" alt="image" src="https://github.com/user-attachments/assets/7d74923c-8e29-42d0-9459-95b4a94aa4f5" />
 
-Скрін 8 — Запуск nc -l 1234
+Скрін 8 - Запуск nc -l 1234
 
 На основній ВМ (підключення):
 ```bash
@@ -298,7 +298,7 @@ nc 192.168.56.101 1234
 
 <img width="788" height="111" alt="image" src="https://github.com/user-attachments/assets/d7d88bb2-60dd-466b-9738-efdd271871ff" />
 
-Скрін 9 — Передача повідомлення
+Скрін 9 - Передача повідомлення
 
 Результат:
 
@@ -319,7 +319,7 @@ echo "Test from Main VM" > ~/shared/test.txt
 ```
 <img width="1147" height="118" alt="image" src="https://github.com/user-attachments/assets/50a4f610-7fdb-43d7-8556-83b969025383" />
 
-Скрін 10 — Створення папки та файлу
+Скрін 10 - Створення папки та файлу
 
 Редагування конфігурації Samba
 ```bash
@@ -339,7 +339,7 @@ directory mask = 0777
 
 <img width="1044" height="871" alt="image" src="https://github.com/user-attachments/assets/682eb5c8-bd70-4ae3-9c18-19d29721a30c" />
 
-Скрін 11 — Файл smb.conf після редагування
+Скрін 11 - Файл smb.conf після редагування
 
 Перезапуск служби:
 ```bash
@@ -348,7 +348,7 @@ sudo systemctl restart smbd
 
 <img width="1028" height="853" alt="image" src="https://github.com/user-attachments/assets/1eb1c06c-28bd-4862-9e23-0a7696962a35" />
 
-Скрін 12 — Служба smbd активна (running)
+Скрін 12 - Служба smbd активна (running)
 
 ### 3.7 Монтування папки на клоні
 
@@ -364,7 +364,7 @@ sudo mount -t cifs //192.168.56.102/shared ~/shared_from_main -o guest
 
 <img width="1060" height="145" alt="image" src="https://github.com/user-attachments/assets/247ecf5f-c7e2-4aba-8e4a-c8602220938a" />
 
-Скрін 13 — Успішне монтування мережевої папки з основної ВМ на клон
+Скрін 13 - Успішне монтування мережевої папки з основної ВМ на клон
 
 Перевірка:
 ```bash
@@ -379,13 +379,13 @@ cp ~/shared_from_main/test.txt ~/Desktop/
 
 <img width="837" height="100" alt="image" src="https://github.com/user-attachments/assets/c1a1e6ce-3fa9-497c-8392-39c3736bde57" />
 
-Скрін 14 — Файл test.txt на Desktop клону
+Скрін 14 - Файл test.txt на Desktop клону
 
 ---
 
 <img width="696" height="687" alt="image" src="https://github.com/user-attachments/assets/3a45bc5f-e40d-4e40-b532-fce416775995" />
 
-Скрін 15 — Файл test.txt у графічному середовищі клону
+Скрін 15 - Файл test.txt у графічному середовищі клону
 
 ## 4. Обмін інформацією між основною ОС (Windows) та віртуальними ОС
 ### 4.1 Організація механізму обміну даними
@@ -400,7 +400,7 @@ cp ~/shared_from_main/test.txt ~/Desktop/
 
 <img width="509" height="394" alt="image" src="https://github.com/user-attachments/assets/789aa024-4033-4086-bbcb-5ae4eb215481" />
 
-Скрін 1 — Налаштування спільної папки у VirtualBox
+Скрін 1 - Налаштування спільної папки у VirtualBox
 
 Після встановлення Guest Additions та додавання користувача до групи vboxsf, папка автоматично монтується у каталозі:
 ```bash
@@ -412,7 +412,12 @@ ls /media
 ```
 <img width="683" height="323" alt="image" src="https://github.com/user-attachments/assets/6f272242-0971-42e6-954e-181f4a24623a" />
 
-Скрін 2 — Перевірка автоматичного монтування спільної папки
+Скрін 2 - Перевірка автоматичного монтування спільної папки
+
+**Пояснення**
+
+Механізм Shared Folders дозволяє інтегрувати файлову систему хост-ОС (Windows) з файловою системою віртуальної машини.
+Після підключення Guest Additions папка автоматично монтується під префіксом sf_, що забезпечує двосторонній обмін файлами.
 
 ### 4.2 Копіювання аудіо-файлу з Windows до віртуальних машин
 
@@ -427,7 +432,7 @@ ls /media/sf_wr3
 
 <img width="881" height="67" alt="image" src="https://github.com/user-attachments/assets/82f99834-530d-46e7-956a-cc78dec9c8bf" />
 
-Скрін 3 — Аудіофайл у спільній папці
+Скрін 3 - Аудіофайл у спільній папці
 
 Далі файл було скопійовано на робочий стіл основної ВМ:
 ```bash
@@ -436,7 +441,7 @@ cp "/media/sf_wr3/Charli XCX - Seeing Things.mp3" ~/Desktop/
 
 <img width="837" height="129" alt="image" src="https://github.com/user-attachments/assets/5188f54f-d0b1-4c1c-bbb7-e23d2420a3e3" />
 
-Скрін 4 — Аудіофайл на Desktop основної ВМ
+Скрін 4 - Аудіофайл на Desktop основної ВМ
 
 Аналогічні дії виконано на клоні:
 ```bash
@@ -445,7 +450,12 @@ cp "/media/sf_wr3/Charli XCX - Seeing Things.mp3" ~/Desktop/
 
 <img width="857" height="358" alt="image" src="https://github.com/user-attachments/assets/18a93c1d-a49f-40df-befa-78c7cdb1a6a4" />
 
-Скрін 5 — Аудіофайл на Desktop клону
+Скрін 5 - Аудіофайл на Desktop клону
+
+**Пояснення**
+
+Файл, розміщений у спільній папці Windows, став доступним одночасно для обох віртуальних машин.
+Копіювання виконувалося стандартною командою cp, що підтверджує інтеграцію файлових систем.
 
 ### 4.3 Зворотна дія: копіювання документів з ВМ до Windows
 
@@ -460,7 +470,7 @@ cp ~/Desktop/test_from_vm.txt /media/sf_wr3/
 
 <img width="804" height="124" alt="image" src="https://github.com/user-attachments/assets/36c240e4-33cb-4261-9830-4b06e328fe4e" />
 
-Скрін 6 — Копіювання документа з основної ВМ у Windows
+Скрін 6 - Копіювання документа з основної ВМ у Windows
 
 Аналогічно на клоні:
 ```bash
@@ -471,7 +481,7 @@ cp ~/Desktop/test_from_clone.txt /media/sf_wr3/
 
 <img width="1143" height="157" alt="image" src="https://github.com/user-attachments/assets/0b095220-b366-4974-9d37-6ee925b723e9" />
 
-Скрін 7 — Копіювання документа з клону у Windows
+Скрін 7 - Копіювання документа з клону у Windows
 
 ### 4.4 Перевірка у Windows
 
@@ -486,4 +496,21 @@ C:\Users\Яся\Downloads\wr3
 
 <img width="1715" height="638" alt="image" src="https://github.com/user-attachments/assets/3948a418-b7cd-420c-897b-4323103f2cbe" />
 
-Скрін 8 — Результат обміну файлами у Windows
+Скрін 8 - Результат обміну файлами у Windows
+
+**Пояснення**
+
+Завдяки механізму Shared Folders обмін відбувається у режимі реального часу.
+Файли, скопійовані у каталог /media/sf_wr3, одразу стають доступними у папці wr3 основної операційної системи.
+
+## Conclusion
+
+During the completion of Work-case 3, the mechanisms of cloning and exporting virtual machines in Oracle VirtualBox were studied, and network interaction between the main virtual operating system and its clone was successfully configured.
+
+A full clone of the virtual machine was created, which allowed obtaining an independent copy of the system with a separate virtual disk. Additionally, the virtual machine was exported in OVA format, enabling portability and deployment in other virtualization environments.
+
+Different network adapter types (NAT and Host-Only) were configured to provide both Internet access and isolated communication between virtual machines. Network connectivity was verified using ping and netcat utilities, confirming correct IP addressing and local communication.
+
+Furthermore, bidirectional file exchange between the host operating system (Windows) and both virtual machines was implemented using VirtualBox Shared Folders and Guest Additions. An audio file was successfully copied from Windows to the desktops of both virtual machines, and text documents were transferred back to the host system.
+
+As a result, practical skills were gained in virtual machine cloning, network configuration, file sharing mechanisms, and integration between host and guest operating systems within a virtualization environment.
